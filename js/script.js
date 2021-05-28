@@ -192,3 +192,92 @@ if(windowTop > sect6Top-500){ //섹션6-500한 위치를 지나면
 }
       
 })
+
+// section 3,4,5 에 대한 자바 스크립트 
+
+
+//베스트 셀러 탭메뉴
+$('.tab_tit li').click(function (e) {
+    e.preventDefault()
+    $('.tab_tit li').find('a').removeClass('on')
+    $(this).find('a').addClass('on')
+    var idx = $(this).index()
+    $('.books_wrap').hide()
+    $('.books_wrap').eq(idx).fadeIn(1000)
+
+})
+
+//책 위에 마우스 이벤트 발생 
+$('li a.bestBook').mouseenter(function () {
+    $('li a.bestBook').removeClass('on')
+    $(this).addClass('on')
+}).mouseleave(function () {
+    $('li a.bestBook').removeClass('on')
+})
+
+//스와이퍼 2 설정 
+var swiper2 = new Swiper(".mySwiper2", {
+    slidesPerView: 4,
+    spaceBetween: 10,
+    autoplay: true,
+    scrollbar: {
+        el: ".swiper-scrollbar",
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    loop: true,
+})
+
+
+//슬라이드 바우스 엔터하면 스탑 제어 
+$('.newBook').mouseenter(function () {
+    swiper1.autoplay.stop()
+}).mouseleave(function () {
+    swiper1.autoplay.start()
+})
+
+
+//스와이퍼 3 설정
+var swiper3 = new Swiper(".mySwiper3", {
+    pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    loop: true,
+});
+
+// 탑으로가기  up------------------
+$('span.up img').click(function () {
+    home()
+})
+
+function home() {
+    $('html, body').stop().animate({
+        'scrollTop': '0'
+    })
+
+}
+
+//마우스 휠이벤트
+$('section').mousewheel(function (event, delta) {
+    if (delta > 0) {
+        var prev = $(this).prev().offset().top
+        $('html, body').stop().animate({
+            'scrollTop': prev
+        }, 500, 'linear')
+    } else if (delta < 0) {
+        var next = $(this).next().offset().top
+        $('html, body').stop().animate({
+            'scrollTop': next
+        }, 500, 'linear')
+        $('span.up img').css({
+            'display': 'block'
+        })
+    }
+})
