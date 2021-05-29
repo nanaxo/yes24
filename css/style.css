@@ -4,7 +4,8 @@ h3{position:fixed; top:10%; width: 100px; height: 100px; color:rgb(211, 211, 211
 
 
 /* common --------------------------------------------------------------------------------------------------*/
-.inner{width: 95%; margin: 0 auto; padding-top: 4%;}
+/* .inner{width: 95%; text-align: center; margin: 0 auto; padding-top: 4%; }  style2.css랑 중복되서 주석처리 */ 
+.inner{margin: 0 auto; }
 h2{margin-bottom: 50px; text-align: center; font-size: 2rem;}
 
 
@@ -93,12 +94,12 @@ nav >ul:hover .lv2{display: block;}
 #sect1{position:relative;width: 100%; background: #e4f1d3;  margin-top:12%;}
 #sect1 .mySwiper{z-index:996;}
 #sect1 .swiper-slide{height: 40vh;}
-#sect1 .swiper-slide:nth-child(1){background: url(/PROJECT/images/main_slide1.png) center no-repeat; background-size: cover;}
-#sect1 .swiper-slide:nth-child(2){background: url(/PROJECT/images/main_slide2.png) center no-repeat; background-size: cover;}
-#sect1 .swiper-slide:nth-child(3){background: url(/PROJECT/images/main_slide3.png) center no-repeat; background-size: cover;}
-#sect1 .swiper-slide:nth-child(4){background: url(/PROJECT/images/main_slide4.png) center no-repeat; background-size: cover;}
-#sect1 .swiper-slide:nth-child(5){background: url(/PROJECT/images/main_slide5.png) center no-repeat; background-size: cover;}
-#sect1 .swiper-slide:nth-child(6){background: url(/PROJECT/images/main_slide6.png) center no-repeat; background-size: cover;}
+#sect1 .swiper-slide:nth-child(1){background: url(/PROJECT/images/sect1_slide/main_slide1.png) center no-repeat; background-size: cover;}
+#sect1 .swiper-slide:nth-child(2){background: url(/PROJECT/images/sect1_slide/main_slide2.png) center no-repeat; background-size: cover;}
+#sect1 .swiper-slide:nth-child(3){background: url(/PROJECT/images/sect1_slide/main_slide3.png) center no-repeat; background-size: cover;}
+#sect1 .swiper-slide:nth-child(4){background: url(/PROJECT/images/sect1_slide/main_slide4.png) center no-repeat; background-size: cover;}
+#sect1 .swiper-slide:nth-child(5){background: url(/PROJECT/images/sect1_slide/main_slide5.png) center no-repeat; background-size: cover;}
+#sect1 .swiper-slide:nth-child(6){background: url(/PROJECT/images/sect1_slide/main_slide6.png) center no-repeat; background-size: cover;}
 
 #sect1 .swiper-slide p{position:absolute; left:10%; top:30%; font-size: 30px;}
 #sect1 .swiper-slide p span{display: block; font-size: 20px; padding-bottom: 10px;}
@@ -116,7 +117,7 @@ nav >ul:hover .lv2{display: block;}
 
 /* #sect2------------------------------------------------------------------------------------------------------------ */
 
-#sect2{position:relative; height: 100vh; padding-top: 100px;}
+#sect2{position:relative; height: 68vh; padding-top: 10%;}
 #sect2 .tabMenu ul li{display: inline-block;}
 #sect2 .tabMenu ul li:nth-child(2){margin: 0px 10px;}
 #sect2 .tabMenu ul li a{width: 182px; padding: 8px 18px; text-align: center; z-index:999;
@@ -124,20 +125,26 @@ nav >ul:hover .lv2{display: block;}
 #sect2 .tabMenu ul li.on a{font-weight: 600; color:#fff; background: #196ab3; border:none;}
 
 /* tabContents */
-.tabContents{position:absolute; left:50%; top:60%; transform: translate(-50%, -50%);}
-.tabItem{display: none;}
+.tabContents{margin-top: 4%;}
+.tabItem{width: 100%; margin: 0 auto; display: none;}
 .tabItem.on{display: block;}
 
 .thumbnail, 
-.thumbnail2{display: flex; width: 100%; margin-bottom: 2%; }
+.thumbnail2{display: flex; width: 100%; height: 124px; margin-bottom: 2%;}
 
-.thumbnail li, 
-.thumbnail2 li{position:relative; display: flex; margin:10px; transition: 1s;}
+.thumbnail li,
+.thumbnail2 li{position:relative; width: 124px; height: 124px;display: flex; margin:3%;}
+
+.thumbnail li.on, 
+.thumbnail2 li.on, 
+.thumbnail2 li.stay,
+.thumbnail li.stay
+{width: 124px;}
 
 
-.img {width: 160px; height: 160px; background: rgb(217, 223, 248);}
-.img img{width: 100%; height: 100%; vertical-align: top;}
-.txt_wrap{position:relative; width: 160px; height: 160px; margin-left: 2%; padding:16px; border: 1px solid rgb(223, 221, 221); display: none; }
+.img {width: 124px; height: 124px; background: rgb(217, 223, 248);}
+.img img{display: block; width: 100%; height: 100%;}
+.txt_wrap{position:relative; width: 140px; height: 140px; margin-left: 2%; padding:16px; border: 1px solid rgb(223, 221, 221); display: none; }
 
 .txt_wrap span{display: block; text-align: left;}
 .txt_wrap .slogan{font-size: 24px; margin-bottom: 24px;}
@@ -149,15 +156,16 @@ a.btn_solid { position: absolute; right: 10px; bottom: 10px;
 }
 
 /* #sect6------------------------------------------------------------------------------------------------------------ */
-#sect6{position:relative; height: 64vh; background: rgb(238, 238, 238); padding-top: 100px; overflow: hidden;}
+#sect6{position:relative; height: 70vh; background: rgb(238, 238, 238); padding-top: 10%; overflow: hidden;}
 #sect6 h2{opacity: 0;}
 .cardContainer{position:relative; width: 100%; height: 500px; left:50%; bottom:0%; transform: translateX(-50%); }
 .cardContainer li{position:absolute; display: inline-block; width: 120px; height: 120px; opacity: 0;}
 .cardContainer li img{width: 100%; height: 100%;}
-.cardContainer li:nth-child(1){left:26%; top:10%;}
-.cardContainer li:nth-child(2){right:26%; top:10%;}
-.cardContainer li:nth-child(3){left:18%; bottom:38%;}
-.cardContainer li:nth-child(4){right:18%; bottom:38%;}
+
+.cardContainer li:nth-child(1) { left: 20%; top: 10%; }
+.cardContainer li:nth-child(2) { right: 20%; top: -2%; }
+.cardContainer li:nth-child(3) { left: 8%; bottom: 38%; }
+.cardContainer li:nth-child(4) { right: 5%; bottom: 41%; }
 .phone{position:absolute; width: 50%; left:50%; bottom:-20%; transform: translateX(-50%);}
 .phone img{width:100%;}
 
@@ -168,9 +176,6 @@ a.btn_solid { position: absolute; right: 10px; bottom: 10px;
 
 /* MOBILE, PAD --------------------------------------------------------------------------------//////////////////////////////////////////////*/
 @media screen and (max-width:767px),(min-width:768px){
-/* common */
-section{height: 100vh;}
-
 
 /* #sect1 */
 #sect1{height: 40vh;}
@@ -181,26 +186,9 @@ section{height: 100vh;}
 /* #sect2 */
 #sect2 .tabMenu ul li a{width: 132px; font-size: 12px; padding:10px 0px;}
 
-.thumbnail, 
-.thumbnail2{width: 420px; margin: auto;}
-
-.thumbnail li,
-.thumbnail2 li{width: 120px; height: 30%;}
-
-.thumbnail li.on, 
-.thumbnail2 li.on, 
-.thumbnail2 li.stay,
-.thumbnail li.stay
-{width: 120px;}
 
 
 
-/* #sect6 */
-#sect6{height: 84vh;}
-.cardContainer li:nth-child(1) { left: 20%; top: 10%; }
-.cardContainer li:nth-child(2) { right: 20%; top: -2%; }
-.cardContainer li:nth-child(3) { left: 8%; bottom: 38%; }
-.cardContainer li:nth-child(4) { right: 5%; bottom: 41%; }
 
 }
 
@@ -220,9 +208,6 @@ section{height: 100vh;}
 
 /* DESKTOP --------------------------------------------------------------------------------//////////////////////////////////////////////*/
 @media screen and (min-width:1280px){
-/* common */
-.inner{width: 80%; margin: auto; text-align: center;}
-
 /* header */
 header .inner{padding-top: 0;}
 .top{flex-wrap: nowrap;}
@@ -239,21 +224,22 @@ nav{display: block;}
 #sect1{height: auto; margin-top:0%;}
 
 /* #sect2 */
-#sect2{height: 140vh;}
-.tabContents{top:54%;}
+#sect2{height: 100vh; padding-top: 0;}
+.tabContents{margin: 4% auto;}
 
 .img, .txt_wrap{width: 264px; height: 264px;}
+
 .thumbnail, 
-.thumbnail2{width: auto; margin: auto;}
+.thumbnail2{width: 80%; margin: 0 auto; margin-bottom: 2%; height: 264px; }
 
 .thumbnail li, 
-.thumbnail2 li{width: 274px;}
+.thumbnail2 li{width: 264px; height: 264px; margin: 1%; transition: 1s;}
 
 .thumbnail li.on, 
 .thumbnail2 li.on, 
 .thumbnail2 li.stay,
 .thumbnail li.stay
-{width: 550px;}
+{width: 550px; height: 264px;}
 
 .thumbnail li.on .txt_wrap, 
 .thumbnail2 li.on .txt_wrap,  
@@ -262,5 +248,10 @@ nav{display: block;}
 {display: block;}
 
 /* #sect6 */
+#sect6{height: 76vh; padding-top: 0;}
 .phone{width: 20%; bottom:-38%;}
+.cardContainer li:nth-child(1){left:26%; top:10%;}
+.cardContainer li:nth-child(2){right:26%; top:10%;}
+.cardContainer li:nth-child(3){left:18%; bottom:38%;}
+.cardContainer li:nth-child(4){right:18%; bottom:38%;}
 }
