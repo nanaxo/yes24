@@ -3,7 +3,8 @@
 * {
     box-sizing: border-box;
 }
-.wrap{
+
+.wrap {
     position: relative;
     background-color: #fff;
     color: #333;
@@ -11,20 +12,28 @@
 
 /* 공통속성------------ */
 section .inner {
+    border: 1px solid #000;
+    height: 100%;
     text-align: center;
     position: relative;
     margin: auto;
 }
-section h2 {
+
+/* section h2 {
     margin-bottom: 50px;
     font-size: 2rem;
-}
-section .btn {
+} */
+
+/* BTN 설정 ----------------- */
+#sect4 .btn,
+#sect3 .btn {
     position: absolute;
     width: 70px;
     height: 25px;
 }
-section .btn a {
+
+#sect4 .btn a,
+#sect3 .btn a {
     font-size: .7rem;
     display: block;
     height: 100%;
@@ -34,14 +43,22 @@ section .btn a {
     border-radius: 30px;
     padding-top: 3px;
 }
-section a.book {
+
+/* 책 공통 설정---------------- */
+#sect3 a.book,
+#sect4 a.book {
     border: 1px solid rgb(206, 206, 206);
     display: block;
 }
-section img {
+
+/* 이미지 설정 ------------------- */
+#sect3 img,
+#sect4 img,
+#sect5 img {
     vertical-align: top;
     width: 100%;
 }
+
 /* 책 소개  글자 속성 같은거 지정.  */
 #sect3 .slide .newBookWrap b,
 #sect4 .books li b {
@@ -61,6 +78,7 @@ section img {
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
 /* section today's new-----------------3 */
 #sect3 {
     background-color: #eee;
@@ -73,15 +91,34 @@ section img {
 
 #sect3 .price {
     font-size: 12px;
+    position: relative;
+    padding-bottom: 20px;
 }
 
-/* sect3  myswiper1 */
-#sect3 .swiper-container {
-    padding-bottom: 51px;
+#sect3 .price::after {
+    content: "NEW";
+    width: 40px;
+    height: 16px;
+    font-size: 10px;
+    position: absolute;
+    background: #ffffff;
+    top: 2px;
+    left: 30%;
+    border-radius: 5px;
+    color: #DE4B50;
+    font-weight: 800;
 }
 
-#sect3 .slide .newBookWrap {
-    max-height: 720px;
+/* sect3  myswiper1 -------------------*/
+
+#sect3 .slideContainer {
+    position: relative;
+
+}
+
+#sect3 .mySwiper2 {
+    height: 100%;
+    padding-bottom: 20px;
 }
 
 /* BESTSELLER SECTION4------------------------------- */
@@ -138,9 +175,6 @@ section img {
     padding: 1.5%;
 }
 
-/* #sect4 .tabContents .books_inner .books li a img {
-    height: 148%;
-} */
 
 /* sect5 recommend & event---------------------------------------------- */
 #sect5 .inner {
@@ -170,49 +204,94 @@ section img {
 }
 
 #sect5 .recommend .ad {
+    color: rgb(135, 135, 135);
     position: absolute;
     width: 20px;
     height: 20px;
-    top: 2%;
-    right: 1%;
+    top: 10px;
+    right: 5px;
 }
 
-/* img up */
-span.up {
-    z-index: 9999;
-    display: inline-block;
-    width: 200px;
-    height: 120px;
-    position: fixed;
-    bottom: 0%;
-    right: -3%;
-    /* display: none; */
+/* event_Wrap */
+.event_btn {
+    position: absolute;
+    width: 90px;
+    height: 30px;
+    top: 3%;
+    left: 85%;
 }
 
-span.up img {
-    width: 100%;
-    transform: rotate(180deg);
-    cursor: pointer;
+[class*="btnAll_"] {
+    border: 1px solid #bababa;
+    border-radius: 50%;
+}
+
+[class*="btnAll_N"] {
+    transform: rotate(-90deg);
+
+}
+
+[class*="btnAll_P"] {
+    transform: rotate(90deg);
+}
+
+.btnAll_N_event {
+    left: 67px;
+    width: 22px;
+    height: 22px;
+    padding: 5px;
+}
+
+.btnAll_P_event {
+    left: -5px;
+    width: 22px;
+    height: 22px;
+    padding: 5px;
+}
+
+.event_nav {
+    color: #949292;
+    width: 50px;
+    height: 30px;
+    left: 50%;
+    top: -8px;
+    transform: translateX(-50%);
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    display: none;
 }
 
 /* Mobile */
 @media screen and (max-width:767px) {
     section {
-        height: 110vh;
+        height: 130vh
     }
 
     section .inner {
         width: 95%;
         padding-top: 7%;
     }
+
     section .btn {
         top: 95%;
         right: 10%;
     }
 
     /* --------------------------- */
-    #sect4 {
-        height: 120vh;
+    #sect3 {
+        height: 70vh
+    }
+
+    #sect3 {
+        font-size: 12px;
+        height: 70vh;
+
+    }
+
+    #sect3 .slideContainer .price {
+        display: none;
     }
 
     #sect4 .books_inner {
@@ -233,12 +312,24 @@ span.up img {
     #sect5 .inner .event_Wrap {
         width: 100%;
     }
+
+    .btnAll_Nnew,
+    .btnAll_Pnew {
+        right: -2%;
+        width: 20px;
+        height: 20px;
+        padding: 0.5%;
+    }
+
+    .btnAll_Pnew {
+        left: -2%;
+    }
 }
 
 /* TABLIT */
 @media screen and (min-width:768px) {
     section {
-        height: 110vh;
+        height: 150vh;
     }
 
     section .inner {
@@ -260,6 +351,10 @@ span.up img {
 
     }
 
+    #sect3 {
+        height: 90vh;
+    }
+
     #sect5 .inner {
         justify-content: center;
     }
@@ -267,7 +362,19 @@ span.up img {
     #sect5 .inner .recommend,
     #sect5 .inner .event_Wrap {
         width: 70%;
-        margin: auto;
+        margin: 0 auto;
+    }
+
+    .btnAll_Nnew,
+    .btnAll_Pnew {
+        right: -2%;
+        width: 50px;
+        height: 50px;
+        padding: 0.5%;
+    }
+
+    .btnAll_Pnew {
+        left: -2%;
     }
 
 }
@@ -275,21 +382,30 @@ span.up img {
 /* PC */
 @media screen and (min-width:1280px) {
     section {
-        height: 90vh;
+        height: 110vh;
     }
 
     section .inner {
         width: 80%;
     }
-    #sect3 .inner {
-        width: 70%;
-    }
+
     section .btn {
         top: 10%;
         right: 0%;
     }
 
+    #sect3 {
+        height: 120vh;
+    }
+
+    #sect3 .inner .mySwiper2 {
+        width: 1000px;
+        overflow: hidden;
+        margin: auto;
+    }
+
     /* sectio4 bestseller---------------------------- */
+
     #sect4 .tabMenu ul {
         text-align: left;
     }
@@ -303,6 +419,10 @@ span.up img {
         padding: 0;
     }
 
+    #sect5 {
+        height: 90vh;
+    }
+
     #sect5 .inner {
         text-align: left;
     }
@@ -310,6 +430,18 @@ span.up img {
     #sect5 .inner .recommend,
     #sect5 .inner .event_Wrap {
         width: 48%;
+    }
+
+    .btnAll_Nnew,
+    .btnAll_Pnew {
+        right: -5%;
+        width: 50px;
+        height: 50px;
+        padding: 0.5%;
+    }
+
+    .btnAll_Pnew {
+        left: -5%;
     }
 
 }
