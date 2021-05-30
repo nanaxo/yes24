@@ -45,16 +45,34 @@ $('header nav').mouseleave(function () {
     $('.navBg').stop().slideUp()
 })
 
+//mobileMenu show hide
+$('.bar').click(function(){
+            $('.mobileNav').animate({'left':'0%'})
+})
+
+$('.btnClose').click(function(){
+            $('.mobileNav').animate({'left':'-24%'})
+})
+    
 //#sect1 ----------------------------------------------------------------------------/////////////////////////////////////////////////////////////
 
 // .mySwuper slide
 var swiper1 = new Swiper(".mySwiper1", {
+    initialSlide: 0,
     loop: true,
-    speed: 1800,
+    speed: 1200,
     autoplay: {
         delay: 2500,
         disableOnInteraction: false,
     },
+    pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
     // pagination: {
     //     el: ".swiper-pagination",
     //     clickable: true,
@@ -62,19 +80,20 @@ var swiper1 = new Swiper(".mySwiper1", {
 });
 
 // .pageBtn
-$('a.prev').click(function (e) {
-    e.preventDefault()
-    swiper.slidePrev(500)
-})
+// $('#sect1 a.prev').click(function (e) {
+//     e.preventDefault()
+//     swiper.slidePrev(500)
+// })
 
-$('a.next').click(function (e) {
-    e.preventDefault()
-    swiper.slideNext(500)
-})
+// $('#sect1 a.next').click(function (e) {
+//     e.preventDefault()
+//     swiper.slideNext(500)
+// })
 
-$('a.play').click(function (e) {
-    e.preventDefault()
-})
+
+// $('a.play').click(function (e) {
+//     e.preventDefault()
+// })
 
 //autoplay stop toggle btn
 var sw = 0
@@ -197,7 +216,7 @@ $(window).scroll(function () {
             })
         })
     } else if (windowTop < sect6Top) { //섹션6-500한 위치보다 스크롤 위로 올라가면            안먹고있음!!!!!!!!
-        $('$sect6 .mainTxt').animate({
+        $('#sect6 h2').animate({
             'opacity': '0',
             'margin-top': '0%'
         }, 1000, function () {

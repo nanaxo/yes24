@@ -337,7 +337,7 @@ section .inner {
         padding-top: 5%;
     }
 
-    section .btn {
+    #sect3 .btn {
         top: 10%;
         right: 5%;
     }
@@ -389,7 +389,7 @@ section .inner {
         width: 80%;
     }
 
-    section .btn {
+    #sect3 .btn {
         top: 10%;
         right: 0%;
     }
