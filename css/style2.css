@@ -1,0 +1,454 @@
+@charset 'UFT-8';
+
+* {
+    box-sizing: border-box;
+}
+
+.wrap {
+    position: relative;
+    background-color: #fff;
+    color: #333;
+}
+
+/* 공통속성------------ */
+section .inner {
+    height: 100%;
+    text-align: center;
+    position: relative;
+    margin: auto;
+}
+
+/* section h2 {
+    margin-bottom: 50px;
+    font-size: 2rem;
+} */
+
+/* BTN 설정 ----------------- */
+.more_btn {
+    position: absolute;
+    width: 70px;
+    height: 25px;
+}
+
+.more_btn a {
+    font-size: .7rem;
+    display: block;
+    height: 100%;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid rgb(191, 191, 191);
+    border-radius: 30px;
+    padding-top: 3px;
+}
+
+/* 책 공통 설정---------------- */
+#sect3 a.book,
+#sect4 a.book {
+    border: 1px solid rgb(206, 206, 206);
+    display: block;
+}
+
+/* 이미지 설정 ------------------- */
+#sect3 img,
+#sect4 img,
+#sect5 img {
+    vertical-align: top;
+    width: 100%;
+}
+
+/* 책 소개  글자 속성 같은거 지정.  */
+#sect3 .slide .newBookWrap b,
+#sect4 .books li b {
+    margin-top: 10px;
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#sect4 .tabContents .books_inner .books li p,
+#sect3 .slide .newBookWrap p {
+    color: rgb(116, 116, 116);
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* section today's new-----------------3 */
+#sect3 {
+    background-color: #eee;
+}
+
+#sect3 .newBook img {
+    width: 100%;
+    vertical-align: top;
+}
+
+#sect3 .price {
+    font-size: 12px;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+#sect3 .price::after {border: 1px solid rgb(194, 194, 194);
+    content: "NEW";
+    width: 36px;
+    height: 16px;
+    font-size: 10px;
+    position: absolute;
+    background: #ffffff;
+    top: 2px;
+    border-radius: 5px;
+    color: #DE4B50;
+    font-weight: 800;
+}
+
+/* sect3  myswiper1 -------------------*/
+
+#sect3 .slideContainer {
+    position: relative;
+
+}
+
+#sect3 .mySwiper2 {
+    height: 100%;
+    padding-bottom: 20px;
+}
+#sect3 .swiper-container-horizontal>.swiper-scrollbar {
+    height: 2px;}
+/* BESTSELLER SECTION4------------------------------- */
+#sect4 .tabMenu ul li {
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+#sect4 .tabMenu ul li a {
+    width: 120px;
+    padding: 7px 15px;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid rgb(191, 191, 191);
+    border-radius: 30px;
+}
+
+#sect4 .tabMenu ul li a.on {
+    background-color: #196ab3;
+    color: #fff;
+}
+
+/*-bestseller -tabaContents ---------------*/
+#sect4 .tabContents {
+    margin-top: 2%;
+    position: relative;
+}
+
+/* books Wrap display */
+#sect4 .tabContents .books_wrap {
+    display: none;
+}
+
+#sect4 .tabContents .books_wrap.on {
+    display: block;
+}
+
+/* books flex */
+#sect4 .tabContents .books_inner {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+#sect4 .tabContents .books_inner .books {
+    display: flex;
+
+}
+
+/* 세부사항 */
+#sect4 .tabContents .books_inner .books li {
+    width: 33.333333%;
+    padding: 1.5%;
+}
+
+
+/* sect5 recommend & event---------------------------------------------- */
+#sect5 .inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#sect5 .inner .recommend ul li a {
+    display: block;
+    padding: 3%;
+    background-color: #eee;
+    transition: .5s;
+
+}
+
+#sect5 .inner .recommend ul li a:hover {
+    background-color: #196bb351;
+}
+
+#sect5 ul li {
+    margin-bottom: 10px;
+}
+
+#sect5 .recommend {
+    position: relative;
+}
+
+#sect5 .recommend .ad {
+    color: rgb(135, 135, 135);
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 10px;
+    right: 5px;
+}
+
+/* event_Wrap */
+.event_btn {
+    position: absolute;
+    width: 90px;
+    height: 30px;
+    top: 5%;
+    right: 5%;
+}
+
+[class*="btnAll_"] {
+    border: 1px solid #bababa;
+    border-radius: 50%;
+}
+
+[class*="btnAll_N"] {
+    transform: rotate(-90deg);
+
+}
+
+[class*="btnAll_P"] {
+    transform: rotate(90deg);
+}
+
+.btnAll_N_event {
+    left: 67px;
+    width: 22px;
+    height: 22px;
+    padding: 5px;
+}
+
+.btnAll_P_event {
+    left: -5px;
+    width: 22px;
+    height: 22px;
+    padding: 5px;
+}
+
+.event_nav {
+    color: #949292;
+    width: 50px;
+    height: 30px;
+    left: 50%;
+    top: -8px;
+    transform: translateX(-50%);
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    display: none;
+}
+
+/* Mobile */
+@media screen and (max-width:767px) {
+    section {
+        height: 120vh
+    }
+
+    section .inner {
+        width: 95%;
+        padding-top: 7%;
+    }
+
+    .more_btn {
+        bottom: 7%;
+        right: 10%;
+    }
+
+    /* --------------------------- */
+    #sect3 {
+        font-size: 12px;
+        height: 60vh;
+
+    }
+
+    #sect3 .slideContainer .price {
+        display: none;
+    }
+
+    #sect4 .books_inner {
+        width: 100%;
+        justify-content: center;
+    }
+
+    #sect4 .books_inner .books {
+        justify-content: center;
+        width: 100%;
+    }
+
+    #sect5 .inner {
+        justify-content: center;
+    }
+
+    #sect5 .inner .recommend,
+    #sect5 .inner .event_Wrap {
+        width: 100%;
+    }
+
+    .btnAll_Nnew,
+    .btnAll_Pnew {
+        right: -2%;
+        width: 20px;
+        height: 20px;
+        padding: 0.5%;
+    }
+
+    .btnAll_Pnew {
+        left: -2%;
+    }
+}
+
+/* TABLIT */
+@media screen and (min-width:768px) {
+    section {
+        height: 150vh;
+    }
+
+    section .inner {
+        width: 95%;
+        padding-top: 5%;
+    }
+
+    .more_btn {
+        top: 5%;
+        right: 5%;
+    }
+
+    #sect3 .inner .mySwiper2 {
+        width: 100%;
+        overflow: hidden;
+        margin: auto;
+    }
+
+    #sect4 .books_inner {
+        justify-content: center;
+    }
+
+    #sect4 .books_wrap .books {
+        max-width: 840px;
+
+    }
+
+    #sect3 {
+        height: 90vh;
+    }
+    #sect3 .price::after {
+        left: 12%;
+    }
+    #sect5 .inner {
+        justify-content: center;
+    }
+
+    #sect5 .inner .recommend,
+    #sect5 .inner .event_Wrap {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .btnAll_Nnew,
+    .btnAll_Pnew {
+        right: -2%;
+        width: 50px;
+        height: 50px;
+        padding: 0.5%;
+    }
+
+    .btnAll_Pnew {
+        left: -2%;
+    }
+
+}
+
+/* PC */
+@media screen and (min-width:1280px) {
+    section {
+        height: 100vh;
+    }
+
+    section .inner {
+        width: 80%;
+    }
+
+    .more_btn {
+        top: 10%;
+        right: 5%;
+    }
+
+    #sect3 .inner .mySwiper2 {
+        max-width: 1000px;
+        width: 90%;
+        overflow: hidden;
+        margin: auto;
+    }
+    #sect3 .price::after {
+        left: 40px;
+    }
+    #sect3 .swiper-container-horizontal>.swiper-scrollbar {
+        left: 50%;
+     transform: translateX(-50%);
+     width: 80%;
+ max-width: 1000px;}
+    /* sectio4 bestseller---------------------------- */
+
+    #sect4 .tabMenu ul {
+        text-align: left;
+    }
+
+    #sect4 .books_inner {
+        justify-content: space-between;
+    }
+
+    #sect4 .books_wrap .books {
+        width: 49.7%;
+        padding: 0;
+    }
+
+    #sect5 {
+        height: 90vh;
+    }
+
+    #sect5 .inner {
+        text-align: left;
+    }
+
+    #sect5 .inner .recommend,
+    #sect5 .inner .event_Wrap {
+        width: 48%;
+    }
+
+    .btnAll_Nnew,
+    .btnAll_Pnew {
+        right: 10px;
+        width: 50px;
+        height: 50px;
+        padding: 0.5%;
+    }
+
+    .btnAll_Pnew {
+        left: 10px;
+    }
+
+}
+
+/* section5 recommend, event */
