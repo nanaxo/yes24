@@ -58,13 +58,12 @@ $('.btnClose').click(function(){
 
 // .mySwuper slide
 var swiper1 = new Swiper(".mySwiper1", {
-    initialSlide: 0,
     loop: true,
     speed: 1200,
-    autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-    },
+    // autoplay: {
+    //     delay: 2500,
+    //     disableOnInteraction: false,
+    // },
     pagination: {
         el: ".swiper-pagination",
         type: "fraction",
@@ -73,10 +72,7 @@ var swiper1 = new Swiper(".mySwiper1", {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       },
-    // pagination: {
-    //     el: ".swiper-pagination",
-    //     clickable: true,
-    //   },
+
 });
 
 // .pageBtn
@@ -176,75 +172,10 @@ function mobile() {
 
 
 // #sect6----------------------------------------------------------------------------/////////////////////////////////////////////////////////////
-//offset 위치값 구하기
-var sect6Top = $('#sect6').offset().top
-// console.log('sect6='+sect6Top) //1770
 
 
-//scroll event---------------------------------------------------------------------------
-$(window).scroll(function () {
-    //현재 스크롤값 구하기
-    var windowTop = $(this).scrollTop()
-    $('h3').text(windowTop)
 
-    if (windowTop > sect6Top - 500) { //섹션6-500한 위치를 지나면
-        $('h3').text('도착')
-        $('#sect6 h2').animate({
-            'opacity': '1',
-            'margin-top': '-2%'
-        }, 1000, function () {
-            $('#sect6 .cardContainer li:nth-child(1)').animate({
-                'opacity': '1',
-                'margin-top': '-2%'
-            }, 300, function () {
-                $('#sect6 .cardContainer li:nth-child(2)').animate({
-                    'opacity': '1',
-                    'margin-top': '-2%'
-                }, 300, function () {
-                    $('#sect6 .cardContainer li:nth-child(3)').animate({
-                        'opacity': '1',
-                        'margin-top': '-2%'
-                    }, 300, function () {
-                        $('#sect6 .cardContainer li:nth-child(4)').animate({
-                            'opacity': '1',
-                            'margin-top': '-2%'
-                        }, 300, function () {
 
-                        })
-                    })
-                })
-            })
-        })
-    } else if (windowTop < sect6Top) { //섹션6-500한 위치보다 스크롤 위로 올라가면            안먹고있음!!!!!!!!
-        $('#sect6 h2').animate({
-            'opacity': '0',
-            'margin-top': '0%'
-        }, 1000, function () {
-            $('#sect6 .cardContainer li:nth-child(1)').animate({
-                'opacity': '0',
-                'margin-top': '0%'
-            }, 300, function () {
-                $('#sect6 .cardContainer li:nth-child(2)').animate({
-                    'opacity': '0',
-                    'margin-top': '0%'
-                }, 300, function () {
-                    $('#sect6 .cardContainer li:nth-child(3)').animate({
-                        'opacity': '0',
-                        'margin-top': '0%'
-                    }, 300, function () {
-                        $('#sect6 .cardContainer li:nth-child(4)').animate({
-                            'opacity': '0',
-                            'margin-top': '0%'
-                        }, 300, function () {
-
-                        })
-                    })
-                })
-            })
-        })
-    }
-
-})
 
 // section 3,4,5 에 대한 자바 스크립트 
 
