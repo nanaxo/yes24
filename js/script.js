@@ -199,20 +199,39 @@ $('li a.bestBook').mouseenter(function () {
     $('li a.bestBook').removeClass('on')
 })
 
+
 //스와이퍼 2 설정 
 var swiper2 = new Swiper(".mySwiper2", {
-    slidesPerView: 4,
+    slidesPerView: 3,
     spaceBetween: 20,
-        autoplay: {
-          delay: 2500,
-          disableOnInteraction: false,
-        },
-    scrollbar: {
-        el: ".swiper-scrollbar",
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
     },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    // scrollbar: {
+    //     el: ".swiper-scrollbar",
+    // },
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+        640: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+        },
+        768: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+        },
+        1024: {
+            slidesPerView: 4,
+            spaceBetween: 20,
+        },
     },
 })
 
