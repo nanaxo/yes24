@@ -36,13 +36,11 @@ $('.textDeco li a').mouseleave(function () {
 })
 
 //header menu
-$('header nav').mouseenter(function () {
-    $('header .lv2').stop().slideDown()
-    $('.navBg').stop().slideDown()
+$('li.lv1').mouseenter(function () {
+    $(this).find('ul.lv2').stop().slideDown()
 })
-$('header nav').mouseleave(function () {
-    $('header .lv2').stop().slideUp()
-    $('.navBg').stop().slideUp()
+$('li.lv1').mouseleave(function () {
+    $('ul.lv2').stop().slideUp()
 })
 
 //mobileMenu show hide
