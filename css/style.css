@@ -32,7 +32,6 @@ h2{margin-bottom: 50px; text-align: center; font-size: 2rem;}
 /* header -------------------------------------------------------------------------------------------------- */
 
 header{height: 192px; background: #fff; padding-top: 20px;}
-
 h1{margin-left: 50px;}
 .utill, nav{display: none;}
 
@@ -91,11 +90,11 @@ nav >ul{display: flex; justify-content: space-between;text-align: center; }
 .lv2{position:absolute; width: 100%; display: none;  z-index:999;}
 .lv2 a{padding:5px; color:white;}
 
-nav >ul:hover .lv2{display: block;}
+nav .lv1:hover .lv2{display: block;}
 .lv1:hover >a{background: #333333; color:white;}
-.lv2 li:hover a{text-decoration: underline;}
+.lv3 li:hover a{text-decoration: underline;}
 
-.navBg{position:absolute; width: 100%; height: 130px; left:0;top:192px; background:#333333; z-index:998; display: none;}
+.navBg{position:absolute; width: 100%; height: 284px; left:0;top:192px; background:#333333; z-index:998; }
 
 
 /* #sect1------------------------------------------------------------------------------------------------------------ */
@@ -117,10 +116,12 @@ nav >ul:hover .lv2{display: block;}
 #sect1 .swiper-slide p span{display: block; font-size: 20px; padding-bottom: 10px;}
 
 #sect1 .pageBtn{position:absolute; width: 160px; height: 50px; left:4.5%;top:40%;}
-#sect1 .pageBtn .btn{position:absolute; top:0%; display: block; width: 20px; height: 20px; padding:5px; margin: 18px; cursor: pointer;
-     background-repeat: no-repeat; background-position: center; background-size: contain; border-radius: 50%; border: 1px solid rgb(189, 189, 189);}
-#sect1 .swiper-button-prev{left:0%; background-image: url(../images/arrow_top.png);transform: rotate(-90deg);}
-#sect1 .swiper-button-next{right: 0%; background-image: url(../images/arrow_top.png);transform: rotate(90deg);}
+#sect1 .pageBtn .btn{position:absolute; top:0%; display: block; width: 30px; height: 30px; 
+    padding:10px; margin: 11px; cursor: pointer;
+     border-radius: 50%; border: 1px solid rgb(189, 189, 189);}
+#sect1 .pageBtn .btn img{width: 100%; vertical-align: top;}
+#sect1 .swiper-button-prev{left:0%;transform: rotate(90deg);}
+#sect1 .swiper-button-next{right: 0%; transform: rotate(-90deg);}
 
 
 #sect1 .swiper-pagination{position:absolute; width: 50px; height: 20px; left:50%; top:50%; transform: translate(-50%, -50%); z-index:997;}
@@ -195,7 +196,7 @@ header .inner{width: 95%;}
 #sect1 .swiper-slide img{width: 80%; bottom:0;}
 #sect1 .swiper-slide p{left:8%; top:10%; font-size: 20px;}
 #sect1 .swiper-slide p span{font-size: 16px;}
-
+#search{width: 100%;}
 /* #sect2 */
 #sect2 .tabMenu ul li a{width: 132px; font-size: 12px; padding:10px 0px;}
 
@@ -222,7 +223,7 @@ header .inner{width: 95%;}
 /* DESKTOP --------------------------------------------------------------------------------//////////////////////////////////////////////*/
 @media screen and (min-width:1280px){
 /* header */
-header .inner{padding-top: 0;}
+header .inner{width: 80%; padding-top: 0;}
 .top{flex-wrap: nowrap;}
 .mobileNav{display: none;}
 h1{margin-left: 0px;}
@@ -236,11 +237,12 @@ nav{display: block;}
 
 /* #sect1 */
 #sect1{height: auto; margin-top:0%;}
-#sect1 .swiper-slide img{width: 30%; bottom:0;}
+#search{width: 654px; height: 56px;}
+#sect1 .swiper-slide img{width: 30%; left:65%; bottom:0;}
 
-#sect1 .swiper-slide p {left:4%; top:36%; font-size: 2rem;}
+#sect1 .swiper-slide p {left:10%; top:36%; font-size: 3rem;}
 #sect1 .swiper-slide p span{font-size: 1.4rem;}
-#sect1 .pageBtn{top:14.8%;}
+#sect1 .pageBtn{left:9%; top:14.8%;}
 
 
 /* #sect2 */
