@@ -1,0 +1,492 @@
+@charset 'UFT-8';
+@import url('reset.css');
+
+*{box-sizing: border-box;}
+
+
+/* 푸터 공통속성------------ */
+
+
+footer{
+    background: #fff;
+}
+.f_wrap{
+    margin: auto;
+}
+
+
+.conF1 .f1_tell{
+    font-family: Montserrat;
+    color: #008EC4;
+}
+
+.F1_text p{color: #888888;}
+.F1_text b{color: #111111;}
+
+
+
+
+
+
+
+
+
+/* ----------------------------------------------- */
+/* Mobile */
+@media screen and (max-width:767px){
+footer{
+    height: 550px;
+}
+ 
+.f_wrap{
+    width: 90%;
+}
+
+
+
+/* content */
+#footer_content{
+    height: 200px;
+    border: none;
+}
+.f_content{
+padding: 50px 0;
+}
+
+.conF1{
+    width: 100%; 
+    text-align: center;
+}
+.conF1 .f1_tell{
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+
+.F1_text{
+    width: 85%;
+    margin: auto;
+    font-size: 15px;
+    display: flex; 
+    justify-content: space-between;
+}
+.F1_text b{
+    margin-left: 7px;
+    font-weight: 400;
+}
+
+.conF2,.conF3{display: none;}
+
+
+
+/* menu */
+.f_nav{
+    display: none;
+}
+
+.menubottom{
+    width: 30%;
+    margin: auto;
+}
+.family{
+    position:relative;
+    bottom: -250px;
+    display: block;
+}
+
+#family{
+    width: 170px;
+    height: 30px;
+    margin: auto;
+    font-size: 15px;
+    padding: 3px;
+    color: #595959;
+    border: 1px solid #888888;
+}
+
+/* copyright */
+#copyright{
+    color: #595959;
+}
+
+.F2_text{
+    width: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.F2_text p a{
+    color: #595959;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+.f_copyright .footerlogo,.copytext .textcompany,.service{
+   display: none;
+}
+
+.copytext{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+
+.copytext p{
+    font-size: 13px;
+    line-height: 1.7;
+}
+.copytext p a{
+    color: #595959;
+    font-size: 13px;
+}
+
+.copytext p a:hover{font-weight: 600;}
+
+
+
+
+
+}
+
+
+
+
+
+/* ----------------------------------------------- */
+/* TABLIT */
+@media screen and (min-width:768px){
+footer{
+    height: 790px;
+}    
+
+.f_wrap{
+    width: 90%;
+}
+
+
+
+/* content */
+#footer_content{
+    height: 268px;
+    border: none;
+}
+.f_content{
+padding: 50px 0;
+}
+
+.conF1{
+    width: 100%; 
+    text-align: center;
+}
+.conF1 .f1_tell{
+    font-size: 78px;
+    margin-bottom: 20px;
+}
+
+.F1_text{
+    width: 70%;
+    margin: auto;
+    font-size: 20px;
+    display: flex; 
+    justify-content: space-between;
+}
+.F1_text b{
+    margin-left: 20px;
+    font-weight: 400;
+}
+
+.conF2,.conF3{display: none;}
+
+
+
+/* menu */
+.f_nav{
+    display: none;
+}
+
+.menubottom{
+    width: 30%;
+    margin: auto;
+}
+.family{
+    position:relative;
+    bottom: -370px;
+    display: block;
+}
+
+#family{
+    width: 250px;
+    height: 50px;
+    margin: auto;
+    font-size: 20px;
+    padding: 10px;
+    color: #595959;
+    border: 1px solid #888888;
+}
+
+/* copyright */
+#copyright{
+    height: 326px;
+    color: #595959;
+}
+
+.F2_text{
+    width: 30%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.F2_text p a{
+    color: #595959;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+.f_copyright .footerlogo,.copytext .textcompany,.service{
+   display: none;
+}
+
+.copytext{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.copytext p{
+    font-size: 20px;
+    line-height: 1.7;
+}
+.copytext p a{
+    color: #595959;
+    font-size: 18px;
+}
+
+.copytext p a:hover{font-weight: 600;}
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------------------------------------- */
+/* PC */
+@media screen and (min-width:1280px){
+footer{
+    height: 762px;
+    background: #fff;
+}   
+.f_wrap{
+    width: 80%;
+    z-index: 10;
+}
+
+
+/* content */
+#footer_content{
+    height: 343px;
+}
+
+.f_content{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 90px 0 127px 0;
+}
+
+#footer_content{
+    border-bottom: 2px solid #CBCBCB;
+}
+
+.conF1{
+    width: 25%; 
+    text-align: left;
+    border-right: 1px solid #CBCBCB;
+}
+.conF1 .f1_tell{
+    font-size: 58px;
+    margin-bottom: 60px;
+}
+
+.F1_text{
+    position: relative;
+    bottom: 30px;
+    width: 100%;
+    font-size: 18px;
+    display: block;
+
+}
+.conF2{
+    width: 35%; 
+    display: inline-block;
+}
+.conF2 ul{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+
+}
+.conF2 ul li{
+    height: 100%;
+    display: block;
+    text-align: center;
+}
+.conF2 .icon li a{
+    width: 100px;
+    font-size: 15px;
+    font-weight: 900;
+    color: #595959;
+}
+.conF2 .icon li a img{
+    width: 60px;
+    height: 60px;
+    margin:29px 0 27px 0;
+}
+
+.conF3{
+    border-left: 1px solid #CBCBCB;
+    width: 30%; 
+    display: flex;
+    justify-content: space-between;
+}
+.sns{
+    width: 172px;
+    margin-left: 70px;
+}
+.snsicon,.store{
+    display: flex;
+    justify-content: space-between;
+}
+.snsicon{
+    margin: 29px 0 45px 0;
+}
+.snsicon img{
+    height: 42px;
+    margin-right: 48px;
+}
+.store img{
+    height: 20px;
+}
+
+
+
+
+/* menu */
+#footer_menu{
+    display: block;
+    height: 92px;
+    
+}
+.menubottom{
+    width: 80%;
+    border-bottom: 2px solid #CBCBCB;
+}
+.menubottom,.f_nav ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.f_nav{
+    width: 100%;
+    padding: 20px 0;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+}
+.f_nav ul li{
+    font-size: 15px;
+}
+.f_nav ul li a{
+    display: block;
+    color: #595959;
+    padding:3px 38px 0 0;
+}
+.f_nav ul li a:hover{
+    font-weight: 600;
+}
+.family{
+    position:relative;
+    bottom: 3px;
+    display: block;
+
+}
+
+#family{
+    width: 200px;
+    height: 30px;
+    font-size: 16px;
+    margin-top: 20px;
+    padding: 5px;
+    color: #595959;
+    border: 1px solid #888888;
+}
+
+
+
+
+/* copyright */
+
+#copyright{
+    display: block;
+    height: 326px;
+    padding-top: 40px;
+    color: #595959;
+}
+.f_copyright{
+    display: flex;
+    justify-content: space-between;
+}
+.F2_text{display: none;}
+.f_copyright .footerlogo{
+    display: block;
+    margin-top: 30px;
+}
+.f_copyright .footerlogo img{width: 250px;}
+
+.copytext{
+    width: 45%;
+    text-align: left;
+}
+.copytext .textcompany{
+    display: block;
+    font-size: 18px;
+    font-weight: 400;
+}
+.copytext p{
+    font-size: 16px;
+    line-height: 1.7;
+}
+.copytext p a{
+    margin-left: 10px;
+    color: #595959;
+    font-size: 18px;
+}
+
+.copytext p a:hover{font-weight: 600;}
+
+.service{display: block;}
+.service img{margin-right: 20px;}
+.service a{
+    color: #595959;
+    font-size: 18px;
+}
+
+.service a:hover{font-weight: 600;}
+.service p{
+    color: #595959;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+}
