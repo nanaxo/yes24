@@ -176,17 +176,18 @@ function pc() {
   // #sect6
 
     var stopId=0;
+    stopId= setInterval(bannerRotate,50)
 
     function bannerRotate(){
-        $('.cardRotate').animate({rotate:'+=10deg'},'50','linear')
+        $('.cardRotate').animate({rotate:'+=10deg'},'50','linear', 'infinite')
+        
     }
     $('.cardContainer').mouseenter(function(){
-        stopId= setInterval(bannerRotate,50)
-    })
+        $('.cardRotate').stop(1,0)
+        clearInterval(stopId)    })
 
     $('.cardContainer').mouseleave(function(){
-        $('.cardRotate').stop(1,0)
-        clearInterval(stopId)
+        stopId= setInterval(bannerRotate,50)
     })
 
     }
