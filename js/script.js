@@ -58,10 +58,10 @@ $('.btnClose').click(function(){
 var swiper1 = new Swiper(".mySwiper1", {
     loop: true,
     speed: 1200,
-    // autoplay: {
-    //     delay: 2500,
-    //     disableOnInteraction: false,
-    // },
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
     pagination: {
         el: ".swiper-pagination",
         type: "fraction",
@@ -70,37 +70,6 @@ var swiper1 = new Swiper(".mySwiper1", {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       },
-
-});
-
-// .pageBtn
-// $('#sect1 a.prev').click(function (e) {
-//     e.preventDefault()
-//     swiper.slidePrev(500)
-// })
-
-// $('#sect1 a.next').click(function (e) {
-//     e.preventDefault()
-//     swiper.slideNext(500)
-// })
-
-
-// $('a.play').click(function (e) {
-//     e.preventDefault()
-// })
-
-//autoplay stop toggle btn
-var sw = 0
-$('.play').click(function (e) {
-    e.preventDefault()
-    sw = !sw;
-    if (sw) {
-        swiper.autoplay.stop()
-        $(this).addClass('on')
-    } else {
-        swiper.autoplay.start()
-        $(this).removeClass('on')
-    }
 })
 
 // #sect2 ----------------------------------------------------------------------------/////////////////////////////////////////////////////////////
@@ -113,15 +82,14 @@ $('.tabMenu li').click(function (e) {
     e.preventDefault()
     //tabItem show hide
     var idx = $(this).index()
-    $('.tabItem').hide()
-    $('.tabItem').stop().eq(idx).fadeIn(1000)
+    $('.tabItem').stop().hide()
+    $('.tabItem').stop().eq(idx).fadeIn(500)
 })
 
 
 deviceCheck()
 
 
-//화면 리사이즈 이벤트가 발생하면 디바이스 위드 체크, 바아이콘 초기화
 $(window).resize(function () {
     deviceCheck()
 })
@@ -141,35 +109,100 @@ function deviceCheck() {
 }
 
 function pc() {
-    // thumbnail
-    $('.thumbnail li').mouseenter(function () {
-        $('.thumbnail li').removeClass()
+
+    
+    // thumbnail.. travel...
+    $('.thumbnail li').click(function (e) {
+        e.preventDefault()
         $(this).addClass('on')
-    })
-    $('.thumbnail li').mouseleave(function () {
-        $('.thumbnail li').removeClass()
-        $(this).addClass('stay')
+        $('.thumbnail li').animate({'width':'264px'},100)
+        $('.thumbnail li').find('.txt_wrap').stop().animate({'opacity':'0'},0)
+
+        $(this).stop().animate({'width':'600px'},100)
+        $(this).find('.txt_wrap').stop().animate({'opacity':'1'},1000)
+        $(this).find('.txt_wrap').addClass('depth')
 
     })
-    $('.thumbnail2 li').mouseenter(function () {
-        $('.thumbnail2 li').removeClass()
+    $('.thumbnail2 li').click(function (e) {
+        e.preventDefault()
         $(this).addClass('on')
-    })
-    $('.thumbnail2 li').mouseleave(function () {
-        $('.thumbnail2 li').removeClass()
-        $(this).addClass('stay')
+        $('.thumbnail2 li').animate({'width':'264px'},100)
+        $('.thumbnail2 li').find('.txt_wrap').stop().animate({'opacity':'0'},0)
+
+        $(this).stop().animate({'width':'600px'},100)
+        $(this).find('.txt_wrap').stop().animate({'opacity':'1'},1000)
 
     })
-}
+    $('.thumbnail3 li').click(function (e) {
+        e.preventDefault()
+        $(this).addClass('on')
+        $('.thumbnail3 li').animate({'width':'264px'},100)
+        $('.thumbnail3 li').find('.txt_wrap').stop().animate({'opacity':'0'},0)
 
+        $(this).stop().animate({'width':'600px'},100)
+        $(this).find('.txt_wrap').stop().animate({'opacity':'1'},1000)
+
+    })
+    $('.thumbnail4 li').click(function (e) {
+        e.preventDefault()
+        $(this).addClass('on')
+        $('.thumbnail4 li').animate({'width':'264px'},100)
+        $('.thumbnail4 li').find('.txt_wrap').stop().animate({'opacity':'0'},0)
+
+        $(this).stop().animate({'width':'600px'},100)
+        $(this).find('.txt_wrap').stop().animate({'opacity':'1'},1000)
+
+    })
+    $('.thumbnail5 li').click(function (e) {
+        e.preventDefault()
+        $(this).addClass('on')
+        $('.thumbnail5 li').animate({'width':'264px'},100)
+        $('.thumbnail5 li').find('.txt_wrap').stop().animate({'opacity':'0'},0)
+
+        $(this).stop().animate({'width':'600px'},100)
+        $(this).find('.txt_wrap').stop().animate({'opacity':'1'},1000)
+
+    })
+    $('.thumbnail6 li').click(function (e) {
+        e.preventDefault()
+        $(this).addClass('on')
+        $('.thumbnail6 li').animate({'width':'264px'},100)
+        $('.thumbnail6 li').find('.txt_wrap').stop().animate({'opacity':'0'},0)
+
+        $(this).stop().animate({'width':'600px'},100)
+        $(this).find('.txt_wrap').stop().animate({'opacity':'1'},1000)
+
+    })
+  // #sect6
+
+    var stopId=0;
+
+    function bannerRotate(){
+        $('.cardRotate').animate({rotate:'+=10deg'},'50','linear')
+    }
+    $('.cardContainer').mouseenter(function(){
+        stopId= setInterval(bannerRotate,50)
+    })
+
+    $('.cardContainer').mouseleave(function(){
+        $('.cardRotate').stop(1,0)
+        clearInterval(stopId)
+    })
+
+    }
 function mobile() {
-    // $('.thumbnail li').removeClass()
-    // $('.thumbnail2 li').removeClass()
-    // $('.txt_wrap').css({'display':'none'})
+    $('.tabItem li').click(function (e) {
+    e.preventDefault()
+
+    $('.tabItem li').find('.txt_wrap').stop().animate({'opacity':'0'})
+    $('.tabItem li').removeClass()
+    $('.tabItem li').find('.txt_wrap').removeClass('depth')
+
+    })
 }
 
 
-// #sect6----------------------------------------------------------------------------/////////////////////////////////////////////////////////////
+
 
 
 
@@ -197,20 +230,39 @@ $('li a.bestBook').mouseenter(function () {
     $('li a.bestBook').removeClass('on')
 })
 
+
 //스와이퍼 2 설정 
 var swiper2 = new Swiper(".mySwiper2", {
-    slidesPerView: 4,
+    slidesPerView: 3,
     spaceBetween: 20,
-        autoplay: {
-          delay: 2500,
-          disableOnInteraction: false,
-        },
-    scrollbar: {
-        el: ".swiper-scrollbar",
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
     },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    // scrollbar: {
+    //     el: ".swiper-scrollbar",
+    // },
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+        640: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+        },
+        768: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+        },
+        1024: {
+            slidesPerView: 4,
+            spaceBetween: 20,
+        },
     },
 })
 
