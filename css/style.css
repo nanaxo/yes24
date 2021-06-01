@@ -999,23 +999,10 @@ header{ border-bottom: 2px solid rgb(225, 225, 225);}
 
 
     /* #sect6 */
-    #sect6 {
-        height: 110vh;
-        padding-top: 0;
-    }
+#sect6{height: 100vh; padding-top: 0;}
+.phone{width: 20%; bottom:-13%;}
+.cardRotate{position:relative; top:11%; width: 43%; height: 69%; margin: 0 auto;}
 
-    .phone {
-        width: 20%;
-        bottom: -18%;
-    }
-
-    .cardRotate {
-        position: relative;
-        top: 6%;
-        width: 43%;
-        height: 69%;
-        margin: 0 auto;
-    }
 
     .cardContainer {
         position: relative;
