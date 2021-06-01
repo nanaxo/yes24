@@ -45,11 +45,11 @@ $('li.lv1').mouseleave(function () {
 
 //mobileMenu show hide
 $('.bar').click(function(){
-            $('.mobileNav').animate({'left':'0%'})
+    $('.mobileNav').animate({'left':'0%'})
 })
 
 $('.btnClose').click(function(){
-            $('.mobileNav').animate({'left':'-24%'})
+    $('.mobileNav').animate({'left':'-35%'})
 })
     
 //#sect1 ----------------------------------------------------------------------------/////////////////////////////////////////////////////////////
@@ -92,6 +92,7 @@ deviceCheck()
 
 $(window).resize(function () {
     deviceCheck()
+    $('.mobileNav').animate({'left':'-35%'})
 })
 
 function deviceCheck() {
