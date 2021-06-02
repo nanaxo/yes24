@@ -24,7 +24,8 @@ body {
 h2 {
     margin-bottom: 50px;
     text-align: center;
-    font-size: 2rem;
+    font-size: 2.3rem;
+    font-weight: 600;
 }
 
 
@@ -99,7 +100,7 @@ h2 {
 /* header -------------------------------------------------------------------------------------------------- */
 
 header {
-    height: 192px;
+    height: 205px;
     background: #fff;
     padding-top: 20px;
 }
@@ -186,7 +187,7 @@ header .btnClose img {
 
 .selectCatagory a.ts_btn {
     padding-left: 20px;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .selectCatagory a.ts_btn span {
@@ -266,6 +267,7 @@ ul.utill li {
 
 ul.utill li a {
     font-size: 1rem;
+    font-weight: 300;
 }
 
 ul.icon {
@@ -273,14 +275,14 @@ ul.icon {
 }
 
 ul.icon li {
-    line-height: 34px;
-    margin-left: 8px;
+    line-height: 24px;
+    margin-left: 16px;
 }
 
 ul.icon li a {
     display: inline-block;
-    width: 34px;
-    height: 30px;
+    width: 24px;
+    height: 24px;
 }
 
 ul.icon li a img {
@@ -331,7 +333,7 @@ ul.lv2 {
     left: 0;
     background: rgba(255, 255, 255, .9);
     display: none;
-    padding: 20px 0 50px 250px;
+    padding: 30px 0 70px 270px;
 }
 
 .navTit>a {
@@ -344,7 +346,7 @@ nav a {
 
 /* lv1---------------------- */
 nav .lv1 {
-    z-index: 999;
+    z-index: 900;
 }
 
 
@@ -356,6 +358,7 @@ nav .navMenu {
     padding: 7px 10px;
     text-align: center;
     transition: .5s;
+    color: #666;
 }
 
 .navMenu:hover>a {
@@ -365,7 +368,7 @@ nav .navMenu {
 
 
 li.navTit a {
-    padding-bottom: 20px;
+    padding: 20px 0 15px 0;
 }
 
 
@@ -386,7 +389,7 @@ nav .lv1 ul.lv2>li {
     width: 1px;
     height: 100%;
     background: rgb(208, 208, 208);
-    top: 0px;
+    top: 25px;
     left: -30px;
 }
 
@@ -394,9 +397,9 @@ nav .lv1 ul.lv2>li {
     content: '';
     position: absolute;
     width: 1px;
-    height: 75%;
+    height: 70%;
     background: rgb(208, 208, 208);
-    top: 45px;
+    top: 80px;
     left: -30px;
 }
 
@@ -425,12 +428,13 @@ li.navTit.paddingR10 {
 }
 
 .lv3 li a {
-    font-size: 14px;
+    font-size: 15px;
+    font-weight: 400;
     color: #777;
 }
 
 .lv3 li:hover a {
-    color: #000;
+    color: #1b86e4;
 }
 
 
@@ -462,7 +466,7 @@ li.navTit.paddingR10 {
     width: 23%;
     left: 50%;
     bottom: 0;
-    transform: translateX(-50%);
+    transform: translateX(-30%);
 }
 
 #sect1 .slide01 {
@@ -478,16 +482,13 @@ li.navTit.paddingR10 {
 }
 
 #sect1 .slide04 {
-    background: #f1fcff;
-}
-
-#sect1 .slide05 {
     background: #ffcea2;
 }
 
-#sect1 .slide06 {
+#sect1 .slide05 {
     background: #f1f8ff;
 }
+
 
 
 #sect1 .swiper-slide p {
@@ -495,6 +496,7 @@ li.navTit.paddingR10 {
     left: 10%;
     top: 30%;
     font-size: 30px;
+    font-weight: 300;
 }
 
 #sect1 .swiper-slide p span {
@@ -502,6 +504,8 @@ li.navTit.paddingR10 {
     font-size: 20px;
     padding-bottom: 10px;
 }
+
+#sect1 b{text-decoration: none;}
 
 #sect1 .pageBtn {
     position: absolute;
@@ -545,9 +549,11 @@ li.navTit.paddingR10 {
     width: 50px;
     height: 20px;
     left: 50%;
-    top: 50%;
+    top: 45%;
     transform: translate(-50%, -50%);
     z-index: 997;
+    color: rgb(189, 189, 189);
+    font-weight: 300;
 }
 
 
@@ -604,7 +610,7 @@ li.navTit.paddingR10 {
     position: relative;
     display: flex;
     justify-content: space-between;
-    margin: 0 auto;
+    margin: -50px auto;
 }
 
 .tabItem li h2 {
@@ -645,8 +651,8 @@ li.navTit.paddingR10 {
     width: 264px;
     height: 264px;
     margin-left: 2%;
-    padding: 16px;
-    border: 1px solid rgb(223, 221, 221);
+    padding: 20px;
+    /* border: 1px solid rgb(223, 221, 221); */
 }
 
 .txt_wrap span {
@@ -657,12 +663,23 @@ li.navTit.paddingR10 {
 .txt_wrap .slogan {
     font-size: 24px;
     margin-bottom: 24px;
+    font-weight: 300;
+    line-height: 140%;
 }
 
 .txt_wrap .authorle {
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 10px;
+}
+
+.txt_wrap .title{
+    font-weight: 500;
+    font-size: 17px;
+    width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .txt_wrap .author {
@@ -676,11 +693,11 @@ li.navTit.paddingR10 {
 
 a.btn_solid {
     position: absolute;
-    right: 10px;
-    bottom: 10px;
-    width: 20px;
-    height: 20px;
-    line-height: 19px;
+    right: 20px;
+    bottom: 20px;
+    width: 25px;
+    height: 25px;
+    line-height: 23px;
     text-align: center;
     color: rgb(161, 161, 161);
     border: 1px solid rgb(161, 161, 161);
@@ -692,7 +709,7 @@ a.btn_solid {
 #sect6 {
     position: relative;
     height: 70vh;
-    background: rgb(238, 238, 238);
+    background: rgb(247, 247, 247);
     padding-top: 10%;
     overflow: hidden;
 }
@@ -891,7 +908,7 @@ a.btn_solid {
         width: 80%;
         padding-top: 0;
     }
-header{ border-bottom: 2px solid rgb(225, 225, 225);}
+    header{ border-bottom: 1px solid rgb(225, 225, 225);}
     .top {
         flex-wrap: nowrap;
     }
@@ -901,7 +918,7 @@ header{ border-bottom: 2px solid rgb(225, 225, 225);}
     }
 
     h1 {
-        margin-left: 0px;
+        margin-left: 5px;
     }
 
     .bar {
@@ -910,6 +927,10 @@ header{ border-bottom: 2px solid rgb(225, 225, 225);}
 
     .utill {
         display: block;
+    }
+
+    ul.icon{
+        margin-right: 37px;
     }
 
     nav {
@@ -950,7 +971,7 @@ header{ border-bottom: 2px solid rgb(225, 225, 225);}
     }
 
     #sect1 .swiper-slide p {
-        left: 10%;
+        left: 12%;
         top: 36%;
         font-size: 3rem;
     }
@@ -960,14 +981,14 @@ header{ border-bottom: 2px solid rgb(225, 225, 225);}
     }
 
     #sect1 .pageBtn {
-        left: 9%;
+        left: 11.5%;
         top: 14.8%;
     }
 
 
     /* #sect2 */
     #sect2 {
-        height: 114vh;
+        height: 102vh;
         padding-top: 0;
     }
 

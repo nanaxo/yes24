@@ -1,5 +1,5 @@
 @charset 'UFT-8';
-@import url('/reset.css');
+@import url('css/reset.css');
 
 *{box-sizing: border-box;}
 
@@ -292,7 +292,7 @@ footer{
 
 /* content */
 #footer_content{
-    height: 343px;
+    height: 300px;
 }
 
 .f_content{
@@ -303,7 +303,7 @@ footer{
 }
 
 #footer_content{
-    border-bottom: 2px solid #CBCBCB;
+    border-bottom: 1px solid #CBCBCB;
 }
 
 .conF1{
@@ -312,13 +312,13 @@ footer{
     border-right: 1px solid #CBCBCB;
 }
 .conF1 .f1_tell{
-    font-size: 58px;
-    margin-bottom: 60px;
+    font-size: 56px;
+    margin-bottom: 30px;
 }
 
 .F1_text{
     position: relative;
-    bottom: 30px;
+
     width: 100%;
     font-size: 18px;
     display: block;
@@ -344,17 +344,17 @@ footer{
 
 
 .icon li img{
-    height: 80px;
+    height: 60px;
     margin: auto;
 }
 
 .icon2_text{
     position: relative;
-    bottom: 35%;
+    bottom: 40%;
     text-align: center;
     display: flex;
     justify-content: space-between;
-    width:92%;
+    width: 87%;
     margin:0 28px 0 40px;
 }
 .icon2_text li a{
@@ -386,7 +386,8 @@ footer{
 .store img{
     height: 20px;
 }
-
+.yescircle img{width: 130px;
+margin-top: 10px;}
 
 
 
@@ -398,7 +399,7 @@ footer{
 }
 .menubottom{
     width: 80%;
-    border-bottom: 2px solid #CBCBCB;
+    border-bottom: 1px solid #CBCBCB;
 }
 .menubottom,.f_nav ul{
     display: flex;
@@ -475,6 +476,8 @@ footer{
 .copytext p{
     font-size: 16px;
     line-height: 1.7;
+    color: #777;
+    font-weight: 300;
 }
 .copytext p a{
     margin-left: 10px;
@@ -493,9 +496,10 @@ footer{
 
 .service a:hover{font-weight: 600;}
 .service p{
-    color: #595959;
+    color: #777;
     font-size: 15px;
     line-height: 1.7;
+    font-weight: 300;
 }
 
 

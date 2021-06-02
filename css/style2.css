@@ -26,13 +26,12 @@ section .inner {
 /* BTN 설정 ----------------- */
 .more_btn {
     position: absolute;
-    width: 70px;
-    height: 25px;
+    width: 85px;
+    height: 30px;
 }
 
 .more_btn:hover a {
-    background-color: rgba(242, 242, 242, 0.508);
-    font-weight: bold;
+    font-weight: 700;
 }
 
 .more_btn a {
@@ -43,13 +42,13 @@ section .inner {
     background-color: #fff;
     border: 1px solid rgb(191, 191, 191);
     border-radius: 30px;
-    padding-top: 3px;
+    line-height: 28px;
 }
 
 /* 책 공통 설정---------------- */
 #sect3 a.book,
 #sect4 a.book {
-    border: 1px solid rgb(206, 206, 206);
+    /* border: 1px solid rgb(206, 206, 206); */
     display: block;
 }
 
@@ -64,51 +63,67 @@ section .inner {
 /* 책 소개  글자 속성 같은거 지정.  */
 #sect3 .slide .newBookWrap b,
 #sect4 .books li b {
-    margin-top: 10px;
+    margin-top: 15px;
     display: block;
-    width: 100%;
+    width: 95%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    text-align: left;
+    font-size: 20px;
+    font-weight: 500;
 }
 
 #sect4 .tabContents .books_inner .books li p,
 #sect3 .slide .newBookWrap p {
     color: rgb(116, 116, 116);
-    width: 100%;
+    width: 90%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    text-align: left;
+    font-weight: 300;
 }
 
 /* section today's new-----------------3 */
 #sect3 {
-    background-color: #eee;
+    background: rgb(247, 247, 247);
 }
 
 #sect3 .newBook img {
     width: 100%;
     vertical-align: top;
 }
+#sect3 .btnAll_Nnew img,#sect3 .btnAll_Pnew img{width: 60%;}
 
 #sect3 .price {
-    font-size: 12px;
+    font-size: 18px;
     position: relative;
-    padding-bottom: 20px;
+    padding: 15px 0;
+}
+
+#sect3 .price span{
+    text-decoration: line-through;
+    color: #999;
+    font-size: 15px;
+    font-weight: 300;
+    padding: 0 5px;
 }
 
 #sect3 .price::after {
-    border: 1px solid rgb(194, 194, 194);
-    content: "NEW";
-    width: 36px;
-    height: 16px;
-    font-size: 10px;
+    /* border: 1px solid rgb(194, 194, 194); */
+    content: "10%";
+    width: 40px;
+    height: 20px;
+    font-size: 12px;
     position: absolute;
-    background: #ffffff;
-    top: 2px;
-    border-radius: 5px;
+    background: #fff;
+    line-height: 18px;
+    border-radius: 4px;
     color: #DE4B50;
     font-weight: 800;
+    text-align: center;
+    margin: 5px 110px;
 }
 
 /* sect3  myswiper1 -------------------*/
@@ -162,6 +177,7 @@ section .inner {
     background-color: #fff;
     border: 1px solid rgb(191, 191, 191);
     border-radius: 30px;
+    margin: 0 3px;
 }
 
 #sect4 .tabMenu ul li:hover a {
@@ -214,6 +230,8 @@ section .inner {
 
 
 /* sect5 recommend & event---------------------------------------------- */
+#sect5 h2{text-align: left;}
+
 #sect5 .inner {
     display: flex;
     justify-content: space-between;
@@ -222,10 +240,9 @@ section .inner {
 
 #sect5 .inner .recommend ul li a {
     display: block;
-    padding: 3%;
-    background-color: #eee;
+    padding: 3.5%;
+    background: rgb(247, 247, 247);
     transition: .5s;
-
 }
 
 #sect5 .inner .recommend ul li a:hover {
@@ -303,27 +320,31 @@ section .inner {
 /* Mobile */
 @media screen and (max-width:767px) {
 
-    #sect4,
-    #sect5 {
-        height: 110vh
-    }
+    #sect4{height: 130vh;}
+    #sect4 .inner{margin-top: 40px;}
 
+    #sect5 {
+        height: 140vh
+    }
+    #sect5 h2{text-align: center;}
     section .inner {
         width: 95%;
         padding-top: 7%;
     }
 
     .more_btn {
-        bottom: 10%;
-        right: 10%;
+        left: 50%;
+        bottom: 11%;
+        transform: translateX(-50%);
     }
 
     /* --------------------------- */
     #sect3 {
         font-size: 12px;
-        height: 60vh;
+        height: 87vh;
 
     }
+    #sect3 h2{padding-top: 50px;}
     .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
               width: 20%;}
     #sect3 .slideContainer .price {
@@ -334,6 +355,14 @@ section .inner {
     .swiper-pagination-fraction {
         width: 100%;
     }
+
+    #sect4 .tabMenu ul li a {
+        width: 100px;
+        padding: 7px 15px;
+        font-size: 13px;
+        margin: 0 1px;
+    }
+
     #sect4 .books_inner {
         width: 100%;
         justify-content: center;
@@ -352,6 +381,8 @@ section .inner {
     #sect5 .inner .event_Wrap {
         width: 100%;
     }
+
+
 
     .btnAll_Nnew,
     .btnAll_Pnew {
@@ -380,7 +411,7 @@ section .inner {
     }
 
     .more_btn {
-        top: 5%;
+        top: 9%;
         right: 5%;
     }
 
@@ -451,7 +482,7 @@ section .inner {
     }
 
     .more_btn {
-        top: 10%;
+        top: 13%;
         right: 5%;
     }
 
