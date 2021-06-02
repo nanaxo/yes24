@@ -610,7 +610,7 @@ li.navTit.paddingR10 {
     position: relative;
     display: flex;
     justify-content: space-between;
-    margin: -50px auto;
+    margin: 0 auto;
 }
 
 .tabItem li h2 {
@@ -1104,6 +1104,6 @@ a.btn_solid {
 }
 
 
-#sect1, #sect2, #sect6 {
+section {
     overflow: hidden;
 }
